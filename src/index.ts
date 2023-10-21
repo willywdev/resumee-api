@@ -2,6 +2,7 @@ import Bao from "baojs";
 import info from "./data/info.json";
 import skills from "./data/skills.json";
 import index from "./data/index.json";
+import learning from "./data/learning.json";
 
 const app = new Bao();
 const port = parseInt(process.env.PORT || "4545");
@@ -21,6 +22,10 @@ app.after(async (ctx) => {
 
 app.get("/", (ctx) => {
   return ctx.sendJson(index);
+});
+
+app.get("/learning", (ctx) => {
+  return ctx.sendJson(learning);
 });
 
 app.get("/info", (ctx) => {

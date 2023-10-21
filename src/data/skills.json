@@ -2,7 +2,6 @@
   "frontend": [
     "react",
     "svelte",
-    "javascript",
     "html",
     "css",
     "tailwindcss",
@@ -10,15 +9,21 @@
     "materialui",
     "bootstrap"
   ],
-  "test": [
-    "react",
-    "svelte",
-    "javascript",
-    "html",
-    "css",
-    "tailwindcss",
-    "styled-components",
-    "materialui",
-    "bootstrap"
-  ]
+  "backend": ["nextjs", "express", "sveltekit", "nodejs"],
+  "languages": ["javascript", "typescript"],
+  "databases": ["mongodb", "postgresql"],
+  "softskills": [
+    "pair programming",
+    "problem solving",
+    "critical thinking",
+    "self-learning",
+    "teamwork",
+    "communication"
+  ],
+  "tools": ["git", "github", "vscode", "docker", "npm", "bun"],
+  "testing": ["jest", "vitest", "cypress"],
+  "design": ["photoshop", "illustrator", "figma", "procreate"],
+  "cloudservices": ["vercel", "netlify", "aws"],
+  "project-management": ["agile", "scrum", "kanban", "jira"],
+  "mobileDevelopment": ["react native"]
 }
