@@ -16,7 +16,7 @@
   /* 2 */
   border-style: solid;
   /* 2 */
-  border-color: #e5e7eb;
+  border-color: currentColor;
   /* 2 */
 }
 
@@ -129,7 +129,7 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: RobotoMono;
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -434,6 +434,12 @@ video {
   display: none;
 }
 
+html {
+  background: #18191a;
+  font-family: "OpenSans", Arial;
+  color: #e5e5e5;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -703,8 +709,31 @@ video {
   margin: 0.25rem;
 }
 
+.m-2 {
+  margin: 0.5rem;
+}
+
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.my-3 {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem;
 }
 
 .box-border {
@@ -820,6 +849,14 @@ video {
 
 .hidden {
   display: none;
+}
+
+.h-1 {
+  height: 0.25rem;
+}
+
+.h-12 {
+  height: 3rem;
 }
 
 .flex-shrink {
@@ -1332,6 +1369,14 @@ video {
 
 .justify-items-stretch {
   justify-items: stretch;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -1877,18 +1922,6 @@ video {
   padding: 0.25rem;
 }
 
-.p-4 {
-  padding: 1rem;
-}
-
-.p-12 {
-  padding: 3rem;
-}
-
-.p-24 {
-  padding: 6rem;
-}
-
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1955,9 +1988,23 @@ video {
   vertical-align: super;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+.font-mono {
+  font-family: RobotoMono;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .font-bold {
@@ -2036,9 +2083,9 @@ video {
   color: rgb(51 102 153 / .35);
 }
 
-.text-blue-500 {
+.text-prime {
   --tw-text-opacity: 1;
-  color: rgb(59 130 246 / var(--tw-text-opacity));
+  color: rgb(6 214 160 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -2362,10 +2409,16 @@ video {
   a-z-a--z0-9: \\-\\. $;
 }
 
-body {
-  font-family: Arial;
-  background: #14213d;
-  color: #e5e5e5;
+@font-face {
+  font-family: "OpenSans";
+
+  src: url("./assets/OpenSans.woff2");
+}
+
+@font-face {
+  font-family: "RobotoMono";
+
+  src: url("./assets/RobotoMono.ttf");
 }
 
 @media (min-width: 640px) {

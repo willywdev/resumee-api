@@ -2,8 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial;
-  background: #14213d;
-  color: #e5e5e5;
+@font-face {
+  font-family: "OpenSans";
+  src: url("./assets/OpenSans.woff2");
+}
+
+@font-face {
+  font-family: "RobotoMono";
+  src: url("./assets/RobotoMono.ttf");
+}
+
+@layer base {
+  html {
+    background: #18191a;
+    font-family: "OpenSans", Arial;
+    color: #e5e5e5;
+  }
 }
