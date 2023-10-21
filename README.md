@@ -1,6 +1,7 @@
 ![API Logo](/assets/resumeeapibanner.png)
 
-This is a RESTful API providing information about my resume, built with Bun and BaoJS. The API serves various endpoints to access different sections of my resume.
+This is a RESTful API providing information about my resume, built with Bun and BaoJS.
+The API serves various endpoints to access different sections of my resume.
 
 ## 🔗 Endpoints
 
@@ -20,16 +21,12 @@ This endpoint lists my skills, categorized by frontend, backend, languages, and 
 
 - Bun
 - BaoJS
-- Vanilla HTML, JavaScript
+- Vanilla HTML, TypeScript
 - Tailwind CSS
 
 ## 🛠️ Usage
 
-To run this API locally, make sure you have Bun and BaoJS installed. Alternatively, after cloning the repo, use your preferred package manager to install dependencies:
-
-```bash
-npm install
-```
+To run this API locally, make sure you have Bun and BaoJS installed.
 
 Then start the server with:
 
