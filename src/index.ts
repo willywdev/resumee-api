@@ -1,10 +1,10 @@
 import Bao from "baojs";
 
 const app = new Bao();
-const port = parseInt(process.env.PORT || "8080");
+const port = parseInt(process.env.PORT || "4545");
 
 app.get("/", (ctx) => {
-  return ctx.sendText("Hello world from Bao.js running on Railway!");
+  return ctx.sendJson({ message: "Hello World!" });
 });
 
 const server = app.listen({ port: port });
