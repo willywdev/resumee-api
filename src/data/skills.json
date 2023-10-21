@@ -1,0 +1,13 @@
+{
+  "frontend": [
+    "react",
+    "svelte",
+    "javascript",
+    "html",
+    "css",
+    "tailwindcss",
+    "styled-components",
+    "materialui",
+    "bootstrap"
+  ]
+}
