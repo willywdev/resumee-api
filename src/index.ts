@@ -18,5 +18,4 @@ app.get("/skills", (ctx) => {
   return ctx.sendPrettyJson(skills);
 });
 
-const server = app.listen({ port: port });
-console.log(`Server listening on ${server.hostname}:${port}`);
+app.listen({ port: port });
