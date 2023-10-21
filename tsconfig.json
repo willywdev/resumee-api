@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "declaration": true,
-    "lib": ["ESNext"],
+    "lib": ["ESNext", "DOM"],
     "module": "CommonJS",
     "moduleResolution": "node",
     "noEmitOnError": true,
