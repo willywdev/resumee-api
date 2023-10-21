@@ -1,30 +1,48 @@
----
-title: Bao.js
-description: A simple Bao.js webserver running on Bun
-tags:
-  - bun
-  - typescript
----
+![API Logo](/assets/resumeeapibanner.png)
 
-# 🥟 Bun + Bao.js Example
+This is a RESTful API providing information about my resume, built with Bun and BaoJS. The API serves various endpoints to access different sections of my resume.
 
-This example is a simple [Bao.js](https://github.com/mattreid1/baojs) webserver running on the [Bun](https://bun.sh/) JavaScript runtime.
+## 🔗 Endpoints
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/gxxk5g?referralCode=Jem1k1)
+### `/`
 
-## ✨ Features
+This endpoint provides the main information about my resume.
 
-- Bao.js webserver
-- Bun runtime
-- TypeScript
+### `/info`
 
-## 💁‍♀️ How to use
+Here you can find detailed information about myself, including my background, skills, and experiences.
 
-- [Install Bun](https://bun.sh/)
-- Install dependencies `bun install`
-- Connect to your Railway project with `railway link`
-- Run the server `railway run bun run src/index.ts`
+### `/skills`
 
-## 📝 Notes
+This endpoint lists my skills, categorized by frontend, backend, languages, and other relevant categories.
 
-Both this example and Bun are currently experimental and should not be used in production.
+## 💻 Technologies Used
+
+- Bun
+- BaoJS
+- Vanilla HTML, JavaScript
+- Tailwind CSS
+
+## 🛠️ Usage
+
+To run this API locally, make sure you have Bun and BaoJS installed. Alternatively, after cloning the repo, use your preferred package manager to install dependencies:
+
+```bash
+npm install
+```
+
+Then start the server with:
+
+```bash
+bun run src/data.ts
+```
+
+## 🏁 Getting Started
+
+1. Clone this repository.
+2. Install dependencies with `npm install`.
+3. Start the server with `npm start`.
+
+## 📝 License
+
+This project is licensed under the [MIT License](LICENSE).
