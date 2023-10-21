@@ -6,6 +6,22 @@ import index from "./data/index.json";
 const app = new Bao();
 const port = parseInt(process.env.PORT || "4545");
 
+app.after(async (ctx) => {
+  if (ctx.res === null) {
+    throw new Error("ctx.res is null");
+  }
+
+  // CORS
+  ctx.res.headers.set("Access-Control-Allow-Origin", "*");
+  ctx.res.headers.set(
+    "Access-Control-Allow-Methods",
+    "GET, POST, PUT, DELETE, OPTIONS"
+  );
+  ctx.res.headers.set("Access-Control-Allow-Headers", "Content-Type");
+
+  return ctx;
+});
+
 app.get("/", (ctx) => {
   return ctx.sendJson(index);
 });
