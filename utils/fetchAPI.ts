@@ -2,10 +2,8 @@ interface Skills {
   frontend: string[];
 }
 
-async function fetchSkills(): Promise<Skills> {
-  const response = await fetch(
-    "https://resumee-api-production.up.railway.app/skills"
-  );
+async function fetchSkills(url: string): Promise<Skills> {
+  const response = await fetch(url);
 
   if (!response.ok) throw new Error("Something went wrong! " + response.status);
 
@@ -13,7 +11,7 @@ async function fetchSkills(): Promise<Skills> {
   return skillsData;
 }
 
-fetchSkills()
+fetchSkills("https://resumee-api-production.up.railway.app/skills")
   .then((skills) => {
     console.log("Skills:", skills);
   })
