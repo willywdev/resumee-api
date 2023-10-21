@@ -13,10 +13,7 @@ app.after(async (ctx) => {
 
   // CORS
   ctx.res.headers.set("Access-Control-Allow-Origin", "*");
-  ctx.res.headers.set(
-    "Access-Control-Allow-Methods",
-    "GET, POST, PUT, DELETE, OPTIONS"
-  );
+  ctx.res.headers.set("Access-Control-Allow-Methods", "GET");
   ctx.res.headers.set("Access-Control-Allow-Headers", "Content-Type");
 
   return ctx;
