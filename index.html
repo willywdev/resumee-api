@@ -80,6 +80,7 @@
           <div class="mb-3">
             <label
               for="path"
+              id="pathLabel"
               class="block mb-2 font-medium text-gray-900 text-md dark:text-white"
               >Desired path:</label
             >
@@ -87,7 +88,7 @@
               type="text"
               id="path"
               name="path"
-              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-prime focus:border-prime block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-prime dark:focus:border-prime"
+              class="font-mono bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-prime focus:border-prime block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-prime dark:focus:border-prime"
               value="/"
               required />
           </div>
@@ -108,12 +109,20 @@
           >
           <textarea
             id="output"
-            rows="4"
-            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-prime focus:border-prime dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-prime dark:focus:border-prime"
+            rows="10"
+            class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-prime focus:border-prime dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-prime dark:focus:border-prime font-mono"
             placeholder=""
             readonly></textarea>
         </div>
       </section>
     </main>
+    <footer class="flex justify-center mt-5 mb-0">
+      <p class="text-slate-400">
+        made with love by
+        <a class="text-prime" href="https://willyw.dev" target="_blank"
+          >willywdev</a
+        >
+      </p>
+    </footer>
   </body>
 </html>

@@ -2,13 +2,14 @@ const submitButton: HTMLElement | null =
   document.querySelector("#fetchSubmitButton");
 const fetchForm: HTMLElement | null = document.querySelector("#fetchForm");
 const outputField: HTMLElement | null = document.querySelector("#output");
+const pathLabel: HTMLElement | null = document.querySelector("#pathLabel");
 
 fetchForm?.addEventListener("submit", async (event: Event) => {
   event.preventDefault();
   const formData = new FormData(event.target as HTMLFormElement);
   const data = Object.fromEntries(formData);
   const { path } = data;
-  if (sanitizePath(path) === true) {
+  if (sanitizePath(path)) {
     const dataFromFetch = await triggerFetch(path);
     if (submitButton) {
       submitButton.textContent = "Fetching ";
@@ -35,17 +36,29 @@ async function triggerFetch(url) {
     return null;
   }
   const data = await response.json();
-  console.log(data);
   return data;
 }
 
 function sanitizePath(path) {
-  return true;
+  if (path === "/" || path === "/skills" || path === "/info") {
+    return true;
+  } else {
+    if (pathLabel) {
+      const tempClasslist = pathLabel.classList.value;
+      pathLabel.textContent = "Please only use Paths that exist. Aborted.";
+      pathLabel.classList.add("bg-red-600", "rounded-md", "text-center");
+      setTimeout(() => {
+        pathLabel.textContent = "Desired path:";
+        pathLabel.className = tempClasslist;
+      }, 1500);
+    }
+    return false;
+  }
 }
 
 function pasteOutput(data) {
-  console.log(Object.values(data));
+  const jsonString = JSON.stringify(data, null, 2);
   if (outputField) {
-    outputField.textContent;
+    outputField.textContent = jsonString;
   }
 }

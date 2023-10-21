@@ -38,6 +38,7 @@ var _this = this;
 var submitButton = document.querySelector("#fetchSubmitButton");
 var fetchForm = document.querySelector("#fetchForm");
 var outputField = document.querySelector("#output");
+var pathLabel = document.querySelector("#pathLabel");
 fetchForm === null || fetchForm === void 0 ? void 0 : fetchForm.addEventListener("submit", function (event) { return __awaiter(_this, void 0, void 0, function () {
     var formData, data, path, dataFromFetch_1, smallAnimation_1;
     return __generator(this, function (_a) {
@@ -47,7 +48,7 @@ fetchForm === null || fetchForm === void 0 ? void 0 : fetchForm.addEventListener
                 formData = new FormData(event.target);
                 data = Object.fromEntries(formData);
                 path = data.path;
-                if (!(sanitizePath(path) === true)) return [3 /*break*/, 2];
+                if (!sanitizePath(path)) return [3 /*break*/, 2];
                 return [4 /*yield*/, triggerFetch(path)];
             case 1:
                 dataFromFetch_1 = _a.sent();
@@ -84,18 +85,31 @@ function triggerFetch(url) {
                     return [4 /*yield*/, response.json()];
                 case 2:
                     data = _a.sent();
-                    console.log(data);
                     return [2 /*return*/, data];
             }
         });
     });
 }
 function sanitizePath(path) {
-    return true;
+    if (path === "/" || path === "/skills" || path === "/info") {
+        return true;
+    }
+    else {
+        if (pathLabel) {
+            var tempClasslist_1 = pathLabel.classList.value;
+            pathLabel.textContent = "Please only use Paths that exist. Aborted.";
+            pathLabel.classList.add("bg-red-600", "rounded-md", "text-center");
+            setTimeout(function () {
+                pathLabel.textContent = "Desired path:";
+                pathLabel.className = tempClasslist_1;
+            }, 1500);
+        }
+        return false;
+    }
 }
 function pasteOutput(data) {
-    console.log(Object.values(data));
+    var jsonString = JSON.stringify(data, null, 2);
     if (outputField) {
-        outputField.textContent;
+        outputField.textContent = jsonString;
     }
 }
