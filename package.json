@@ -8,6 +8,6 @@
   },
   "scripts": {
     "build": "npx tailwindcss -i ./tailwind.css -o ./output.css --watch",
-    "build-js": "tsc main.ts --outfile ./dist/"
+    "build-js": "tsc main.ts --outFile ./dist/main.js --watch"
   }
 }

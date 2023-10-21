@@ -1,14 +1,13 @@
 const submitButton: HTMLElement | null =
   document.querySelector("#fetchSubmitButton");
 const fetchForm: HTMLElement | null = document.querySelector("#fetchForm");
-console.log(fetchForm);
+const outputField: HTMLElement | null = document.querySelector("#output");
 
-async function handleSubmit(event: Event) {
+fetchForm?.addEventListener("submit", async (event: Event) => {
   event.preventDefault();
   const formData = new FormData(event.target as HTMLFormElement);
-  const data = Object.fromEntries(formData) as { path: string };
+  const data = Object.fromEntries(formData);
   const { path } = data;
-  console.log(path);
   if (sanitizePath(path) === true) {
     const dataFromFetch = await triggerFetch(path);
     if (submitButton) {
@@ -20,10 +19,12 @@ async function handleSubmit(event: Event) {
       }
       if (dataFromFetch) {
         clearInterval(smallAnimation);
+        submitButton ? (submitButton.textContent = "Fetch ") : "";
+        pasteOutput(dataFromFetch);
       }
     }, 350);
   }
-}
+});
 
 async function triggerFetch(url) {
   const response = await fetch(
@@ -40,4 +41,11 @@ async function triggerFetch(url) {
 
 function sanitizePath(path) {
   return true;
+}
+
+function pasteOutput(data) {
+  console.log(Object.values(data));
+  if (outputField) {
+    outputField.textContent;
+  }
 }

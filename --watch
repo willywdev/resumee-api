@@ -37,7 +37,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 var _this = this;
 var submitButton = document.querySelector("#fetchSubmitButton");
 var fetchForm = document.querySelector("#fetchForm");
-var outputField = document.querySelector("#output");
 fetchForm === null || fetchForm === void 0 ? void 0 : fetchForm.addEventListener("submit", function (event) { return __awaiter(_this, void 0, void 0, function () {
     var formData, data, path, dataFromFetch_1, smallAnimation_1;
     return __generator(this, function (_a) {
@@ -47,6 +46,7 @@ fetchForm === null || fetchForm === void 0 ? void 0 : fetchForm.addEventListener
                 formData = new FormData(event.target);
                 data = Object.fromEntries(formData);
                 path = data.path;
+                console.log(path);
                 if (!(sanitizePath(path) === true)) return [3 /*break*/, 2];
                 return [4 /*yield*/, triggerFetch(path)];
             case 1:
@@ -60,8 +60,6 @@ fetchForm === null || fetchForm === void 0 ? void 0 : fetchForm.addEventListener
                     }
                     if (dataFromFetch_1) {
                         clearInterval(smallAnimation_1);
-                        submitButton ? (submitButton.textContent = "Fetch ") : "";
-                        pasteOutput(dataFromFetch_1);
                     }
                 }, 350);
                 _a.label = 2;
@@ -92,10 +90,4 @@ function triggerFetch(url) {
 }
 function sanitizePath(path) {
     return true;
-}
-function pasteOutput(data) {
-    console.log(Object.values(data));
-    if (outputField) {
-        outputField.textContent;
-    }
 }

@@ -9,5 +9,16 @@
     "styled-components",
     "materialui",
     "bootstrap"
+  ],
+  "test": [
+    "react",
+    "svelte",
+    "javascript",
+    "html",
+    "css",
+    "tailwindcss",
+    "styled-components",
+    "materialui",
+    "bootstrap"
   ]
 }
