@@ -1,5 +1,6 @@
 {
   "frontend": [
+    "next.js",
     "react",
     "svelte",
     "html",
@@ -9,9 +10,9 @@
     "materialui",
     "bootstrap"
   ],
-  "backend": ["nextjs", "express", "sveltekit", "nodejs"],
+  "backend": ["next.js", "express", "sveltekit", "nodejs"],
   "languages": ["javascript", "typescript"],
-  "databases": ["mongodb", "postgresql"],
+  "databases": ["mongodb", "postgresql", "mongoose", "prisma"],
   "softskills": [
     "pair programming",
     "problem solving",
