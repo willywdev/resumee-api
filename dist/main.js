@@ -91,7 +91,10 @@ function triggerFetch(url) {
     });
 }
 function sanitizePath(path) {
-    if (path === "/" || path === "/skills" || path === "/info") {
+    if (path === "/" ||
+        path === "/skills" ||
+        path === "/info" ||
+        path === "/learning") {
         return true;
     }
     else {
