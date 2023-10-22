@@ -17,6 +17,10 @@ Here you can find detailed information about myself, including my background, sk
 
 This endpoint lists my skills, categorized by frontend, backend, languages, and other relevant categories.
 
+### `/learning`
+
+This endpoint lists current things im learning.
+
 ## 💻 Technologies Used
 
 - Bun
