@@ -23,8 +23,8 @@
   ],
   "tools": ["git", "github", "vscode", "docker", "npm", "bun"],
   "testing": ["jest", "vitest", "cypress"],
-  "design": ["photoshop", "illustrator", "figma", "procreate"],
-  "cloudservices": ["vercel", "netlify", "aws"],
+  "design": ["photoshop", "illustrator", "procreate"],
+  "cloudservices": ["vercel", "netlify"],
   "project-management": ["agile", "scrum", "kanban", "jira"],
   "mobileDevelopment": ["react native"]
 }

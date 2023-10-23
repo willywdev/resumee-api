@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Awesome Cheatsheets",
+    "description": "Explore a curated collection of cheatsheets designed for web developers. Find handy links, collections, lists, guides, and cheatsheets to streamline your development process.",
+    "used-tech": ["SvelteKit", "NodeJS", "TailwindCSS", "Vite"],
+    "demo-url": "https://awesome-cheatsheets.vercel.app/",
+    "github-repo": "https://github.com/willywdev/awesome-cheatsheets"
+  },
+  {
+    "title": "Taste Trackr",
+    "description": "Track your personal ratings of the restaurants you visit or order often. You can login and create a personal rating system for your restaurants.",
+    "used-tech": [
+      "NextJS",
+      "React",
+      "Mongoose",
+      "MongoDB",
+      "Next-Auth",
+      "Styled-Components"
+    ],
+    "demo-url": "https://taste-trackr.vercel.app/",
+    "github-repo": "https://github.com/willywdev/Taste-Trackr/tree/main"
+  },
+  {
+    "title": "Personal Portfolio 'willyw.dev'",
+    "description": "My personal Portfolio. If you don't like seeing information through an API, visit this.",
+    "used-tech": ["Astro", "React", "Framer Motion"],
+    "demo-url": "https://willyw.dev",
+    "github-repo": "not public"
+  },
+  {
+    "title": "SmartSaver",
+    "description": "Capstone Project from my high-intense Development Bootcamp. Smart Saver App is an expense tracker. It helps you keep track of your expenses and save money efficiently.",
+    "used-tech": [
+      "NextJS",
+      "React",
+      "Styled-Components",
+      "Jest",
+      "MongoDB",
+      "Mongoose"
+    ],
+    "demo-url": "https://capstone-smart-saver.vercel.app/",
+    "github-repo": "https://github.com/hdkuzmahashmi/capstone-smartSaver"
+  }
+]
