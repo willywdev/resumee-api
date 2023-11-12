@@ -45,7 +45,8 @@ function sanitizePath(path) {
     path === "/skills" ||
     path === "/info" ||
     path === "/learning" ||
-    path === "/projects"
+    path === "/projects" ||
+    path === "/hobbies"
   ) {
     return true;
   } else {

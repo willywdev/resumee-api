@@ -3,6 +3,7 @@ import info from "./data/info.json";
 import skills from "./data/skills.json";
 import index from "./data/index.json";
 import learning from "./data/learning.json";
+import hobbies from "./data/hobbies.json";
 
 const app = new Bao();
 const port = parseInt(process.env.PORT || "4545");
@@ -34,6 +35,10 @@ app.get("/info", (ctx) => {
 
 app.get("/skills", (ctx) => {
   return ctx.sendPrettyJson(skills);
+});
+
+app.get("/hobbies", (ctx) => {
+  return ctx.sendPrettyJson(hobbies);
 });
 
 app.listen({ port: port });
