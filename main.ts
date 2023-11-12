@@ -6,7 +6,7 @@ const pathLabel: HTMLElement | null = document.querySelector("#pathLabel");
 
 fetchForm?.addEventListener("submit", async (event: Event) => {
   event.preventDefault();
-  const formData = new FormData(event.target as HTMLFormElement);
+  const formData: FormData = new FormData(event.target as HTMLFormElement);
   const data = Object.fromEntries(formData);
   const { path } = data;
   if (sanitizePath(path)) {
@@ -44,7 +44,8 @@ function sanitizePath(path) {
     path === "/" ||
     path === "/skills" ||
     path === "/info" ||
-    path === "/learning"
+    path === "/learning" ||
+    path === "/projects"
   ) {
     return true;
   } else {

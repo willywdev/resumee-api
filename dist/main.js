@@ -94,7 +94,8 @@ function sanitizePath(path) {
     if (path === "/" ||
         path === "/skills" ||
         path === "/info" ||
-        path === "/learning") {
+        path === "/learning" ||
+        path === "/projects") {
         return true;
     }
     else {
